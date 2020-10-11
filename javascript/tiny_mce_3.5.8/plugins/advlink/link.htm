@@ -1,0 +1,638 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>{#advlink_dlg.title}</title>
+	<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+	<script type="text/javascript" src="../../utils/mctabs.js"></script>
+	<script type="text/javascript" src="../../utils/form_utils.js"></script>
+	<script type="text/javascript" src="../../utils/validate.js"></script>
+	<script type="text/javascript" src="js/advlink.js"></script>
+	<link href="css/advlink.css?b" rel="stylesheet" type="text/css" />
+
+<!--
+<script src="../../../jquery-1.4.4.min.js" type="text/javascript"></script>
+<script src="../../../jquery.livequery.min.js" type="text/javascript"></script>
+-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<style type="text/css">
+#sReset {
+	position:absolute;
+	right:5px;
+	top:8px;
+	*top:10px;
+	float:right;
+	display:none;
+	width:11px;
+	height:10x;
+	border:0px solid;
+	zoom:1;
+}
+#searchBox {
+	display:block;
+	margin-top:5px;
+	padding:5px 5px;
+	border: 1px solid #DFDFDF;
+	background-color:#f5f5f5;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	border-radius: 3px;
+}
+input#search-field {
+	float:left;
+	background-color: white;
+	color: #333;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #d3d3d3;
+	-webkit-appearance: textfield;
+	box-sizing: border-box;
+	margin: 1px;
+	padding:5px;
+	width:220px;
+	font-family:inherit;
+	font-size:inherit;
+	font-weight:inherit;
+}
+input#search-field:focus {
+	border-color:#b7b7b7;
+}
+#ewy_links, #ewy_links *,
+#PageNumber, #PageNumber * {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.clearfix:after {content:"."; clear:both; display:block; visibility:hidden; height:0;}
+.clearfix {display:inline-block;}
+* html .clearfix {height:1%; display:inline-block;}
+.clearfix {display:block; height:1%; zoom:1;}
+#ewy_links {
+	display:block;
+	clear:both;
+	padding:0 0 10px;
+	*padding:0;
+}
+#ewy_links li {
+	clear:both;
+	overflow:hidden;
+	line-height:17px;
+	cursor:pointer;
+	border-bottom:1px solid #DFDFDF;
+	background-color: #FFF;
+}
+#ewy_links li.alternate {
+	background-color:#f5f5f5;
+}
+#ewy_links li:hover,
+#ewy_links li.active {
+	background-color: #EAF2FA;
+	color: #151515;
+}
+#ewy_links li.notfound {
+	background-color: #FFF;
+	color: #f00;
+	padding:6px;
+	font-size:11px;
+	font-weight:normal;
+}
+#ewy_links li a,
+#ewy_links li a:link {
+	float:left;
+	display:block;
+	width:85%;
+	padding:6px;
+	*padding:7px 6px;
+	font-size:11px;
+	font-weight:normal;
+	color: #666;
+	text-decoration:none;
+}
+#PageNumber {
+	float:right;
+	margin-right:0px;
+}
+#PageNumber li {
+	float:left;
+	margin-right:2px;
+	margin-bottom:2px;
+	font-size:11px;
+	font-weight:normal;
+	color: #666;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #d3d3d3;
+	background-color:#FFF;
+}
+#PageNumber li:hover {
+	background-color:#f5f5f5;
+}
+#PageNumber li.active {
+	background-color:#EAF2FA;
+}
+#PageNumber li a,
+#PageNumber li a:link {
+	display:block;
+	padding:4px 8px;
+	font-size:11px;
+	font-weight:normal;
+	color: #666;
+	text-decoration:none;
+}
+</style>
+
+</head>
+<body id="advlink" style="display: none" role="application" onload="javascript:mcTabs.displayTab('general_tab','general_panel', true);" aria-labelledby="app_label">
+	<span class="mceVoiceLabel" id="app_label" style="display:none;">{#advlink_dlg.title}</span>
+	<form onsubmit="insertAction();return false;" action="#">
+		<div class="tabs" role="presentation">
+			<ul>
+				<li id="general_tab" class="current" aria-controls="general_panel" ><span><a href="javascript:mcTabs.displayTab('general_tab','general_panel');" onmousedown="return false;">{#advlink_dlg.general_tab}</a></span></li>
+				<li id="popup_tab" aria-controls="popup_panel" ><span><a href="javascript:mcTabs.displayTab('popup_tab','popup_panel');" onmousedown="return false;">{#advlink_dlg.popup_tab}</a></span></li>
+				<li id="events_tab" aria-controls="events_panel"><span><a href="javascript:mcTabs.displayTab('events_tab','events_panel');" onmousedown="return false;">{#advlink_dlg.events_tab}</a></span></li>
+				<li id="advanced_tab" aria-controls="advanced_panel"><span><a href="javascript:mcTabs.displayTab('advanced_tab','advanced_panel');" onmousedown="return false;">{#advlink_dlg.advanced_tab}</a></span></li>
+			</ul>
+		</div>
+
+		<div class="panel_wrapper" role="presentation">
+			<div id="general_panel" class="panel current">
+				<fieldset>
+					<legend>{#advlink_dlg.general_props}</legend>
+
+					<table border="0" cellpadding="4" cellspacing="0" role="presentation">
+						<tr>
+							<td class="nowrap"><label id="hreflabel" for="href">{#advlink_dlg.url}</label></td>
+								<td><table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td><input id="href" name="href" type="text" class="mceFocus" value="" onchange="selectByValue(this.form,'linklisthref',this.value);" aria-required="true" /></td>
+								<td id="hrefbrowsercontainer">&nbsp;</td>
+							</tr>
+							</table></td>
+						</tr>
+						<tr id="linklisthrefrow">
+							<td class="column1"><label for="linklisthref">{#advlink_dlg.list}</label></td>
+							<td colspan="2" id="linklisthrefcontainer"><select id="linklisthref"><option value=""></option></select></td>
+						</tr>
+						<tr id="anchorlistrow">
+							<td class="column1"><label for="anchorlist">{#advlink_dlg.anchor_names}</label></td>
+							<td colspan="2" id="anchorlistcontainer"><select id="anchorlist"><option value=""></option></select></td>
+						</tr>
+						<tr>
+							<td><label id="targetlistlabel" for="targetlist">{#advlink_dlg.target}</label></td>
+							<td id="targetlistcontainer"><select id="targetlist"><option value=""></option></select></td>
+						</tr>
+						<tr>
+							<td class="nowrap"><label id="titlelabel" for="title">{#advlink_dlg.titlefield}</label></td>
+							<td><input id="title" name="title" type="text" value="" /></td>
+						</tr>
+						<tr>
+							<td><label id="classlabel" for="classlist">{#class_name}</label></td>
+							<td>
+								 <select id="classlist" name="classlist" onchange="changeClass();">
+									<option value="" selected="selected">{#not_set}</option>
+								 </select>
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+
+				<fieldset id="advlink-list" style="margin-top:5px; *margin-bottom:-10px; position:relative;">
+					<legend>Dahili Ba&#287;lant&#305;lar</legend>
+					<div id="searchBox">
+						
+						<label style="position:relative; float:left; margin-left:5px; overflow:hidden;">
+							<span style="float:left; margin-top:6px; *margin-top:8px;">Ara :</span>
+							<input id="search-field" name="search" type="text" placeholder="Bir sayfa aray&#305;n." autocomplete="off" />
+							<a id="sReset" href="#"><img src="search_reset.png" alt="Temizle" border="0" /></a>
+						</label>
+						<label style="position:relative; float:left; margin-left:5px; overflow:hidden;">
+						<span style="float:left; margin-top:6px; *margin-top:8px;">Limit :</span>
+						 <select id="limit" name="limit" style="float:left; margin-top:1px; *margin-top:6px; padding:4px 5px;" onchange="$('#PageNumber li:eq(0) a').click();">
+							<option value="5" selected="selected">5</option>
+							<option value="10">10</option>
+							<option value="25">25</option>
+							<option value="50" >50</option>
+							<option value="100">100</option>
+							<option value="250">250</option>
+						 </select>
+						 </label>
+						<img style="float:left; display:none; margin-left:5px; margin-top:5px;" class="loading-img" src="loading.gif" alt="" />
+						<div style="clear:both;"></div>
+					</div>
+
+					<div class="clearfix" style="overflow:hidden; margin-bottom:5px; padding-bottom:2px;">
+						<div class="clearfix" style="overflow:hidden; overflow-y:scroll; height:180px; *height:200px; margin:2px 0 5px; padding:0 2px;">
+							<ul class="clearfix" id="ewy_links"></ul>
+						</div>
+						<div style="clear:both;"></div>
+						<ul class="clearfix" id="PageNumber"><li><a href="#" data-id="1">1</a></li></ul>
+						<div style="clear:both;"></div>
+					</div>
+				</fieldset>
+
+			</div>
+
+
+<script type="text/javascript">
+var ewyPath = window.parent.GlobalPath;
+
+function ewy_rep(s) {
+	s = s + "";
+	s = String(s)
+		.replace(document.location.host, "")
+		.replace(/^(ht|f)tps?:\/\//gi, "")
+		.replace(/^\/#/gi, "#")
+		.replace(/^\//gi, "")
+		;
+	return s;
+}
+
+;(function( $ ) {
+
+	function ewySearchText() {
+		return $("#search-field").val();
+	}
+
+	function ewySearchLimit() {
+		return $("#limit").val();
+	}
+
+	function ewyLoading() {
+		$(".loading-img").css("display", "inline");
+		setTimeout(function() {
+			$(".loading-img").css("display", "none");
+		}, 600);
+	}
+
+	function loadListe() {
+		$("#PageNumber > li:eq(0) > a").click();
+	}
+
+	$("body").on("click", "#advlink-list #sReset", function(e) {
+		e.preventDefault();
+		$("#search-field").val("");
+		ewyLoading();
+		loadListe();
+		$(this).css("display", "none");
+	});
+
+	$("body").on("keyup", "#advlink-list #search-field", function(e) {
+		$("#sReset").css("display", "inline"); 
+		ewyLoading();
+		loadListe();
+	});
+
+	$("body").on("click", "#advlink-list #ewy_links > li", function(e) {
+		e.preventDefault();
+		$("li", "#ewy_links").removeClass("active");
+		$(this).addClass("active");
+
+		var aText = $("a > span", this).text();
+		var aHref = ewy_rep($("a", this).attr("href"));
+
+		$("#href").val( aHref );
+		$("#title").val( aText );
+	});
+
+	$("body").on("click", "#advlink-list #PageNumber > li > a", function(e) {
+		e.preventDefault();
+		ewyLoading();
+		var dataid = $(this).data("id") || 1;
+		var list = [], pn = [];
+		list.push('<li><a href="/#ewy_home"><b style="font-weight:normal; color:#ad0c0c;">Ana Sayfa Ba&#287;lant&#305;s&#305;</b></a></li>');
+
+		$.ajax({
+			cache: false,
+			dataType: "json",
+			type: "POST",
+			url: ewyPath + "index.asp?mod=popup_sayfa_list",
+			data: {"search": ewySearchText(), "limit" : ewySearchLimit(), "limitstart" : parseInt(eval( dataid ) -1)},
+			success: function(JSON) {
+				//alert(JSON.PageNumber)
+				if(JSON.PageNumber === 0){pn.push( "<li style=\"display:none;\"><a data-id=\"1\">1</a></li>" );}
+				if(JSON.PageNumber === 0){list.push("<li class=\"notfound\">Hi&#231;bir sonu&#231; bulunamad&#305;.</li>");}
+
+				for (var i = 1; i <= JSON.PageNumber; i++) {
+					
+					var alink = $("<a />", {
+						"href" : "#",
+						"text" : i
+					})
+					.data("id", i);
+					
+					var li = $("<li />"); if (dataid === i) { li.addClass("active"); }
+
+					li.html( alink );
+
+					pn.push( li );
+				}
+
+				$("#PageNumber").html( pn );
+
+				$.each(JSON.PageList, function(i, ewy){ //alert(ewy.title)
+					var tempSpaces = "", sty = "", classes = "";
+					for (var a = 1; a <= ewy.levels; a++) {
+						sty = " style=\"margin-right: -" + (a * 15) + "px; padding-left:" + (a * 15)+ "px;\"";
+					}
+					if(ewy.levels > 0) tempSpaces = tempSpaces + "&ndash;&nbsp;";
+
+					//if((i+1) % 2) classes = " class=\"alternate\"";
+					//alert(classes)
+					list.push(
+						'<li' + ( ((i+1) % 2) ? ' class="alternate"' : '' ) + '><span style="float:right; margin:5px 3px 0 0; color:#aaa;">[' + (JSON.PageStart + i + 1) + ']</span>' +
+						'<a href="' + ewy.url +'" '+ sty + '>' + tempSpaces + '<span>' + ewy.title + '</span></a></li>'
+					);
+				});
+
+				$("#ewy_links").html( list );
+			}
+		});
+
+		if ($("#href").val() === "#ewy_home"){ $("#title").val("");}
+	});
+
+	loadListe();
+}(jQuery));
+</script>
+
+			<div id="popup_panel" class="panel">
+				<fieldset>
+					<legend>{#advlink_dlg.popup_props}</legend>
+
+					<input type="checkbox" id="ispopup" name="ispopup" class="radio" onclick="setPopupControlsDisabled(!this.checked);buildOnClick();" />
+					<label id="ispopuplabel" for="ispopup">{#advlink_dlg.popup}</label>
+
+					<table border="0" cellpadding="0" cellspacing="4" role="presentation" >
+						<tr>
+							<td class="nowrap"><label for="popupurl">{#advlink_dlg.popup_url}</label>&nbsp;</td>
+							<td>
+								<table border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td><input type="text" name="popupurl" id="popupurl" value="" onchange="buildOnClick();" /></td>
+										<td id="popupurlbrowsercontainer">&nbsp;</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td class="nowrap"><label for="popupname">{#advlink_dlg.popup_name}</label>&nbsp;</td>
+							<td><input type="text" name="popupname" id="popupname" value="" onchange="buildOnClick();" /></td>
+						</tr>
+						<tr role="group" aria-labelledby="popup_size_label">
+							<td class="nowrap"><label id="popup_size_label">{#advlink_dlg.popup_size}</label>&nbsp;</td>
+							<td class="nowrap">
+								<span style="display:none" id="width_voiceLabel">{#advlink_dlg.width}</span>
+								<input type="text" id="popupwidth" name="popupwidth" value="" onchange="buildOnClick();" aria-labelledby="width_voiceLabel" /> x
+								<span style="display:none" id="height_voiceLabel">{#advlink_dlg.height}</span>
+								<input type="text" id="popupheight" name="popupheight" value="" onchange="buildOnClick();" aria-labelledby="height_voiceLabel" /> px
+							</td>
+						</tr>
+						<tr role="group" aria-labelledby="popup_position_label center_hint">
+							<td class="nowrap" id="labelleft"><label id="popup_position_label">{#advlink_dlg.popup_position}</label>&nbsp;</td>
+							<td class="nowrap">
+								<span style="display:none" id="x_voiceLabel">X</span>
+								<input type="text" id="popupleft" name="popupleft" value="" onchange="buildOnClick();" aria-labelledby="x_voiceLabel" /> /                                
+								<span style="display:none" id="y_voiceLabel">Y</span>
+								<input type="text" id="popuptop" name="popuptop" value="" onchange="buildOnClick();" aria-labelledby="y_voiceLabel" /> <span id="center_hint">(c /c = center)</span>
+							</td>
+						</tr>
+					</table>
+
+					<fieldset>
+						<legend>{#advlink_dlg.popup_opts}</legend>
+
+						<table border="0" cellpadding="0" cellspacing="4" role="presentation" >
+							<tr>
+								<td><input type="checkbox" id="popuplocation" name="popuplocation" class="checkbox" onchange="buildOnClick();" /></td>
+								<td class="nowrap"><label id="popuplocationlabel" for="popuplocation">{#advlink_dlg.popup_location}</label></td>
+								<td><input type="checkbox" id="popupscrollbars" name="popupscrollbars" class="checkbox" onchange="buildOnClick();" /></td>
+								<td class="nowrap"><label id="popupscrollbarslabel" for="popupscrollbars">{#advlink_dlg.popup_scrollbars}</label></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="popupmenubar" name="popupmenubar" class="checkbox" onchange="buildOnClick();" /></td>
+								<td class="nowrap"><label id="popupmenubarlabel" for="popupmenubar">{#advlink_dlg.popup_menubar}</label></td>
+								<td><input type="checkbox" id="popupresizable" name="popupresizable" class="checkbox" onchange="buildOnClick();" /></td>
+								<td class="nowrap"><label id="popupresizablelabel" for="popupresizable">{#advlink_dlg.popup_resizable}</label></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="popuptoolbar" name="popuptoolbar" class="checkbox" onchange="buildOnClick();" /></td>
+								<td class="nowrap"><label id="popuptoolbarlabel" for="popuptoolbar">{#advlink_dlg.popup_toolbar}</label></td>
+								<td><input type="checkbox" id="popupdependent" name="popupdependent" class="checkbox" onchange="buildOnClick();" /></td>
+								<td class="nowrap"><label id="popupdependentlabel" for="popupdependent">{#advlink_dlg.popup_dependent}</label></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="popupstatus" name="popupstatus" class="checkbox" onchange="buildOnClick();" /></td>
+								<td class="nowrap"><label id="popupstatuslabel" for="popupstatus">{#advlink_dlg.popup_statusbar}</label></td>
+								<td><input type="checkbox" id="popupreturn" name="popupreturn" class="checkbox" onchange="buildOnClick();" checked="checked" /></td>
+								<td class="nowrap"><label id="popupreturnlabel" for="popupreturn">{#advlink_dlg.popup_return}</label></td>
+							</tr>
+						</table>
+					</fieldset>
+				</fieldset>
+			</div>
+
+			<div id="advanced_panel" class="panel">
+			<fieldset>
+					<legend>{#advlink_dlg.advanced_props}</legend>
+
+					<table border="0" cellpadding="0" cellspacing="4" role="presentation" >
+						<tr>
+							<td class="column1"><label id="idlabel" for="id">{#advlink_dlg.id}</label></td> 
+							<td><input id="id" name="id" type="text" value="" /></td> 
+						</tr>
+
+						<tr>
+							<td><label id="stylelabel" for="style">{#advlink_dlg.style}</label></td>
+							<td><input type="text" id="style" name="style" value="" /></td>
+						</tr>
+
+						<tr>
+							<td><label id="classeslabel" for="classes">{#advlink_dlg.classes}</label></td>
+							<td><input type="text" id="classes" name="classes" value="" onchange="selectByValue(this.form,'classlist',this.value,true);" /></td>
+						</tr>
+
+						<tr>
+							<td><label id="targetlabel" for="target">{#advlink_dlg.target_name}</label></td>
+							<td><input type="text" id="target" name="target" value="" onchange="selectByValue(this.form,'targetlist',this.value,true);" /></td>
+						</tr>
+
+						<tr>
+							<td class="column1"><label id="dirlabel" for="dir">{#advlink_dlg.langdir}</label></td> 
+							<td>
+								<select id="dir" name="dir"> 
+										<option value="">{#not_set}</option> 
+										<option value="ltr">{#advlink_dlg.ltr}</option> 
+										<option value="rtl">{#advlink_dlg.rtl}</option> 
+								</select>
+							</td> 
+						</tr>
+
+						<tr>
+							<td><label id="hreflanglabel" for="hreflang">{#advlink_dlg.target_langcode}</label></td>
+							<td><input type="text" id="hreflang" name="hreflang" value="" /></td>
+						</tr>
+
+						<tr>
+							<td class="column1"><label id="langlabel" for="lang">{#advlink_dlg.langcode}</label></td> 
+							<td>
+								<input id="lang" name="lang" type="text" value="" />
+							</td> 
+						</tr>
+
+						<tr>
+							<td><label id="charsetlabel" for="charset">{#advlink_dlg.encoding}</label></td>
+							<td><input type="text" id="charset" name="charset" value="" /></td>
+						</tr>
+
+						<tr>
+							<td><label id="typelabel" for="type">{#advlink_dlg.mime}</label></td>
+							<td><input type="text" id="type" name="type" value="" /></td>
+						</tr>
+
+						<tr>
+							<td><label id="rellabel" for="rel">{#advlink_dlg.rel}</label></td>
+							<td><select id="rel" name="rel"> 
+									<option value="">{#not_set}</option> 
+									<option value="lightbox">Lightbox</option> 
+									<option value="alternate">Alternate</option> 
+									<option value="designates">Designates</option> 
+									<option value="stylesheet">Stylesheet</option> 
+									<option value="start">Start</option> 
+									<option value="next">Next</option> 
+									<option value="prev">Prev</option> 
+									<option value="contents">Contents</option> 
+									<option value="index">Index</option> 
+									<option value="glossary">Glossary</option> 
+									<option value="copyright">Copyright</option> 
+									<option value="chapter">Chapter</option> 
+									<option value="subsection">Subsection</option> 
+									<option value="appendix">Appendix</option> 
+									<option value="help">Help</option> 
+									<option value="bookmark">Bookmark</option>
+									<option value="nofollow">No Follow</option>
+									<option value="tag">Tag</option>
+								</select> 
+							</td>
+						</tr>
+
+						<tr>
+							<td><label id="revlabel" for="rev">{#advlink_dlg.rev}</label></td>
+							<td><select id="rev" name="rev"> 
+									<option value="">{#not_set}</option> 
+									<option value="alternate">Alternate</option> 
+									<option value="designates">Designates</option> 
+									<option value="stylesheet">Stylesheet</option> 
+									<option value="start">Start</option> 
+									<option value="next">Next</option> 
+									<option value="prev">Prev</option> 
+									<option value="contents">Contents</option> 
+									<option value="index">Index</option> 
+									<option value="glossary">Glossary</option> 
+									<option value="copyright">Copyright</option> 
+									<option value="chapter">Chapter</option> 
+									<option value="subsection">Subsection</option> 
+									<option value="appendix">Appendix</option> 
+									<option value="help">Help</option> 
+									<option value="bookmark">Bookmark</option> 
+								</select> 
+							</td>
+						</tr>
+
+						<tr>
+							<td><label id="tabindexlabel" for="tabindex">{#advlink_dlg.tabindex}</label></td>
+							<td><input type="text" id="tabindex" name="tabindex" value="" /></td>
+						</tr>
+
+						<tr>
+							<td><label id="accesskeylabel" for="accesskey">{#advlink_dlg.accesskey}</label></td>
+							<td><input type="text" id="accesskey" name="accesskey" value="" /></td>
+						</tr>
+					</table>
+				</fieldset>
+			</div>
+
+			<div id="events_panel" class="panel">
+			<fieldset>
+					<legend>{#advlink_dlg.event_props}</legend>
+
+					<table border="0" cellpadding="0" cellspacing="4" role="presentation" >
+						<tr>
+							<td class="column1"><label for="onfocus">onfocus</label></td> 
+							<td><input id="onfocus" name="onfocus" type="text" value="" /></td> 
+						</tr>
+
+						<tr>
+							<td class="column1"><label for="onblur">onblur</label></td> 
+							<td><input id="onblur" name="onblur" type="text" value="" /></td> 
+						</tr>
+
+						<tr>
+							<td class="column1"><label for="onclick">onclick</label></td> 
+							<td><input id="onclick" name="onclick" type="text" value="" /></td> 
+						</tr>
+
+						<tr>
+							<td class="column1"><label for="ondblclick">ondblclick</label></td> 
+							<td><input id="ondblclick" name="ondblclick" type="text" value="" /></td> 
+						</tr>
+
+						<tr>
+							<td class="column1"><label for="onmousedown">onmousedown</label></td> 
+							<td><input id="onmousedown" name="onmousedown" type="text" value="" /></td> 
+						</tr>
+
+						<tr>
+							<td class="column1"><label for="onmouseup">onmouseup</label></td> 
+							<td><input id="onmouseup" name="onmouseup" type="text" value="" /></td> 
+						</tr>
+
+						<tr>
+							<td class="column1"><label for="onmouseover">onmouseover</label></td> 
+							<td><input id="onmouseover" name="onmouseover" type="text" value="" /></td> 
+						</tr>
+
+						<tr>
+							<td class="column1"><label for="onmousemove">onmousemove</label></td> 
+							<td><input id="onmousemove" name="onmousemove" type="text" value="" /></td> 
+						</tr>
+
+						<tr>
+							<td class="column1"><label for="onmouseout">onmouseout</label></td> 
+							<td><input id="onmouseout" name="onmouseout" type="text" value="" /></td> 
+						</tr>
+
+						<tr>
+							<td class="column1"><label for="onkeypress">onkeypress</label></td> 
+							<td><input id="onkeypress" name="onkeypress" type="text" value="" /></td> 
+						</tr>
+
+						<tr>
+							<td class="column1"><label for="onkeydown">onkeydown</label></td> 
+							<td><input id="onkeydown" name="onkeydown" type="text" value="" /></td> 
+						</tr>
+
+						<tr>
+							<td class="column1"><label for="onkeyup">onkeyup</label></td> 
+							<td><input id="onkeyup" name="onkeyup" type="text" value="" /></td> 
+						</tr>
+					</table>
+				</fieldset>
+			</div>
+		</div>
+
+		<div class="mceActionPanel">
+			<input type="submit" id="insert" name="insert" value="{#insert}" />
+			<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+		</div>
+	</form>
+</body>
+</html>
+

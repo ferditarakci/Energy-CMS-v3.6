@@ -1,0 +1,112 @@
+﻿.title {
+	/*color \*/
+}
+
+.mceContentBody .title {
+	color:#0090ff;
+}
+
+.lightbox {
+	/*color \*/
+}
+
+.mceContentBody .lightbox {
+	color:#ff5400;
+}
+
+img.background-effect {
+	/*color \*/
+}
+
+
+/* image Align */
+.img-left {float:left; margin-right:8px !important;}
+.img-right {float:right; margin-left:8px !important;}
+.img-center {display:block; float:none; margin-left:auto !important; margin-right:auto !important;}
+
+/* other Align */
+.float-left {float:left;}
+.float-right {float:right;}
+.float-center {display:block; margin-left:auto; margin-right:auto;}
+
+/* text Align */
+.text-left {text-align:left;}
+.text-center {text-align:center;}
+.text-right {text-align:right;}
+.text-justify {text-align:justify;}
+
+/* text color */
+.kirmizi {color:#e91a1a;}
+.mavi {color:#1466c3;}
+.sari {color:#ffde00;}
+.yesil {color:#87ba1b;}
+.pembe {color:#ff4aec;}
+.turuncu {color:#ff4e00;}
+.turkuaz {color:#09f8ea;}
+.mor {color:#b400ff;}
+.gri {color:#8c8c8c;}
+.siyah {color:#000000;}
+.beyaz {color:#ffffff;}
+
+
+
+.hidden {
+	display:none;
+}
+
+.mceContentBody .hidden {
+	display:block;
+	margin:8px 0;
+	padding:6px 4px;
+	color:#b4b4b4;
+	border:1px dotted #aab4be;
+	background:#f7f7f7;
+}
+
+.clearfix:after {
+	content:".";
+	clear:both;
+	display:block;
+	visibility:hidden;
+	height:0;
+}
+
+.clearfix {
+	display:inline-block;
+}
+
+* html .clearfix { /* Hides From IE-MAC \*/
+	height:1%;
+	display:inline-block;
+}
+
+.clearfix { /* Endhide From IE-MAC \*/
+	display:block;
+}
+
+.ie6 .clearfix {
+	height:1%;
+}
+
+.ie6 .clearfix,
+.ie7 .clearfix,
+.ie8 .clearfix {
+	zoom:1;
+}
+
+.clr {
+	clear:both;
+	display:block;
+	font-size:0;
+	line-height:0;
+}
+
+.mceContentBody .clr {
+	font-size:inherit;
+	line-height:inherit;
+}
+
+
+abbr.date {
+	cursor:default;
+}

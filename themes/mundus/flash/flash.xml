@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Banner
+bannerBackgroundColor = ""
+bannerLoopCount = ""
+bannerCornerRadius = "0"
+buttonsVerticalMargin = "10"
+buttonsHorizontalMargin = "10"
+textEmbed(Smooth) = "yes"
+textBoldAll = "yes"
+textSize = "14"
+textColor = ""
+textAreaWidth = ""
+textLineSpacing = "0"
+textLetterSpacing = "-0.5"
+textMarginLeft = "12"
+textMarginBottom = "5"
+textBackgroundColor = "0"
+textBackgroundBlur = "true"
+textBackgroundTransparency = "0"
+transitionType = "10"
+transitionVertical = "no"
+transitionDirection = "1"
+transitionRandomEffects = "yes"
+transitionDelayTimeFixed = "2"
+transitionDelayTimePerWord = "0.5"
+transitionSpeed = "8"
+transitionBlur = "yes"
+showTimerClock = "yes"
+showNextButton = "yes"
+showBackButton = "yes"
+showNumberButtons = "yes"
+showNumberButtonsAlways = "no"
+showNumberButtonsHorizontal = "no"
+showNumberButtonsAscending = "yes"
+showPlayPauseOnTimer = "yes"
+alignButtonsLeft = "no"
+alignTextTop = "no"
+autoPlay = "yes"
+imageResizeToFit = "yes"
+imageRandomizeOrder = "no"
+>
+<item
+	buttonLabel=""
+	image="http://www.webtasarimx.net/themes/mundus/flash/images/713.jpg"
+	link="http://www.webtasarimx.net"
+	target="_self"
+	delay=""
+	textBlend="no">
+	<![CDATA[
+		<a href="http://www.webtasarimx.net">Sayfanın bu bölümüne</a> metin eklendiğinde nasıl görüneceğini belirtmek ve geçici olarak boşlukları doldurmak için yazılmıştır
+	]]>
+</item>
+
+<item buttonLabel=""
+	image="http://www.webtasarimx.net/themes/mundus/flash/images/712.jpg"
+	link=""
+	target="_self"
+	delay=""
+	textBlend="no"><![CDATA[Bu yazı geçici olarak oluşturulmuştur.]]></item>
+
+<item buttonLabel=""
+	image="http://www.webtasarimx.net/themes/mundus/flash/images/714.jpg"
+	link=""
+	target="_self"
+	delay=""
+	textBlend="no"><![CDATA[Bu metinin içeriği hakkında endişelenmeyin. Amacı yalnızca boşluk doldurmak olan bu yazının hiç bir edebi değeri yoktur.]]></item>
+
+<item buttonLabel=""
+	image="http://www.webtasarimx.net/themes/mundus/flash/images/715.jpg"
+	link=""
+	target="_self"
+	delay=""
+	textBlend="no"><![CDATA[Cümleler mantıklı gibi görünse de aslında tek bir amaç vardır, o da boşlukları doldurmak]]></item>
+
+<item buttonLabel=""
+	image="http://www.webtasarimx.net/themes/mundus/flash/images/716.jpg"
+	link=""
+	target="_self"
+	delay=""
+	textBlend="no"><![CDATA[Geçici olarak eklenen bu yazıyı buraya kadar okumanız bile ilginç hatta şaşırtıcıdır]]></item>
+
+<item buttonLabel=""
+	image="http://www.webtasarimx.net/themes/mundus/flash/images/717.jpg"
+	link=""
+	target="_self"
+	delay=""
+	textBlend="no"><![CDATA[Madem buraya kadar okudunuz, bari bundan sonrasını da okuyun]]></item>
+
+<item buttonLabel=""
+	image="http://www.webtasarimx.net/themes/mundus/flash/images/718.jpg"
+	link=""
+	target="_self"
+	delay=""
+	textBlend="no"><![CDATA[Bu geçici metin çok eğlenceli olmamakla birlikte oldukca yüce bir amaca hizmet etmektedir]]></item>
+
+<item buttonLabel=""
+	image="http://www.webtasarimx.net/themes/mundus/flash/images/719.jpg"
+	link=""
+	target="_self"
+	delay=""
+	textBlend="no"><![CDATA[Buraya yazdığımız metnin geçici olması onu aslında ilgi çekici hale getiriyor olabilir]]></item>
+
+<item buttonLabel=""
+	image="http://www.webtasarimx.net/themes/mundus/flash/images/720.jpg"
+	link=""
+	target="_self"
+	delay=""
+	textBlend="no"><![CDATA[Bu da yazının içeriğinin merak edilmesine ve okunmasına yol açıyor da olabilir]]>
+</item>
+</Banner>

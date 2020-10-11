@@ -1,0 +1,198 @@
+﻿/* Dropdown control */
+
+a.selectBox {
+	color:#878788;
+	text-decoration:none;
+}
+
+a.selectBox:hover{color:#2f3032;}
+
+.selectBox-dropdown {
+	position:relative;
+	display:inline-block;
+	line-height:1.5em;
+	margin-top: 1px;
+	padding:2px;
+	color:#878788;
+	text-decoration:none;
+	text-align:left;
+	outline:none;
+	cursor:default;
+	vertical-align:middle;
+	border: 1px solid #CCC;
+	background-color:#fff;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-box-shadow: inset 0 1px 0 #EEE,white 0 1px 0;
+	-moz-box-shadow: inset 0 1px 0 #eee,#fff 0 1px 0;
+	box-shadow: inset 0 1px 0 #EEE,white 0 1px 0;
+
+}
+
+.selectBox-dropdown:focus,
+.selectBox-dropdown:focus .selectBox-arrow {
+	color:#2f3032;
+	border-color:#8bcdfb;
+	border-top-color:#78b5e0;
+	background-color:#faffff;
+	-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .05),0 0 8px rgba(82, 168, 236, .6);
+	-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,.05),0 0 8px rgba(82,168,236,.6);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, .05),0 0 8px rgba(82, 168, 236, .6);
+}
+
+.selectBox-dropdown.selectBox-menuShowing {
+	-moz-border-radius-bottomleft:0;
+	-moz-border-radius-bottomright:0;
+	-webkit-border-bottom-left-radius:0;
+	-webkit-border-bottom-right-radius:0;
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:0;
+}
+
+.selectBox-dropdown .selectBox-label {
+	padding:2px 8px;
+	display:inline-block;
+	white-space:nowrap;
+	overflow:hidden;
+	font-size:12px;
+	font-weight:normal;
+	color:#444;
+	
+}
+
+.selectBox-dropdown .selectBox-arrow {
+	position:absolute;
+	top:0;
+	right:0;
+	width:23px;
+	height:100%;
+	background:url(../images/selectBox-arrow.gif) center no-repeat;
+	border-left:solid 1px #CCC;
+}
+/*
+.ie7 .selectBox-dropdown .selectBox-arrow {
+	background:url(../images/selectBox-arrow.gif) center no-repeat;
+}*/
+
+
+/* Dropdown menu */
+.selectBox-dropdown-menu {
+	position:absolute;
+	top:auto;
+	bottom:auto;
+	right:auto;
+	left:auto;
+	z-index:99999;
+	max-height:200px;
+	min-height:1em;
+	border:solid 1px #CCC; /* should be the same border width as .selectBox-dropdown */
+	border-top:none;
+	background:#FFF;
+	-moz-box-shadow:0 2px 6px rgba(0, 0, 0, .2);
+	-webkit-box-shadow:0 2px 6px rgba(0, 0, 0, .2);
+	box-shadow:0 2px 6px rgba(0, 0, 0, .2);
+	overflow:auto;
+}
+
+
+/* Inline control */
+.selectBox-inline {
+	overflow:auto;
+	display:inline-block;
+	padding:5px;
+	border:1px solid #dfdfdf;
+	border-top-color:#d6d5d5;
+	background-color:#fff;
+	color:#2f3032;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-khtml-border-radius:3px;
+	-o-border-radius:3px;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+.selectBox-inline:focus {
+	border-color:#c6c6c6;
+	border-top-color:#a9a9a9;
+}
+
+
+/* Options */
+.selectBox-options,
+.selectBox-options li,
+.selectBox-options li a,
+.selectBox-options li a:link,
+.selectBox-options li a:hover,
+.selectBox-options li a:visited {
+	list-style:none;
+	display:block;
+	cursor:default;
+	padding:0;
+	margin:0;
+	text-decoration:none;
+}
+
+.selectBox-options li a,
+.selectBox-options li a:link,
+.selectBox-options li a:hover,
+.selectBox-options li a:visited {
+	line-height:1.2;
+	padding:2px 5px;
+	white-space:nowrap;
+	overflow:hidden;
+	font-size:12px;
+	font-weight:normal;
+	color:#444;
+	text-decoration:none;
+	background:6px center no-repeat;
+}
+
+.selectBox-options li.selectBox-hover a {
+	background-color:#EEE;
+}
+
+.selectBox-options li.selectBox-disabled a {
+	color:#888;
+	background-color:transparent;
+}
+
+.selectBox-options li.selectBox-selected a {
+	background-color:#C8DEF4;
+}
+
+.selectBox-options .selectBox-optgroup {
+	color:#666;
+	background:#EEE;
+	font-weight:normal;
+	line-height:1.5;
+	padding:0 .3em;
+	white-space:nowrap;
+}
+
+
+/* Disabled state */
+.selectBox.selectBox-disabled {
+	color:#888 !important;
+}
+
+.selectBox-dropdown.selectBox-disabled .selectBox-arrow {
+	opacity:.5;
+	filter:alpha(opacity=50);
+	border-color:#666;
+}
+
+.selectBox-inline.selectBox-disabled {
+	color:#888 !important;
+}
+
+.selectBox-inline.selectBox-disabled .selectBox-options a {
+	background-color:transparent !important;
+}

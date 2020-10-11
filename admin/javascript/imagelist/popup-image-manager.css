@@ -1,0 +1,25 @@
+﻿/*
+	Copyright © 2008 - 2012
+	Energy Web Yazılım - İstanbul
+	www.webtasarimx.net
+	bilgi@webtasarimx.net
+*/
+
+#imageList {display:block;*display:inline-block; overflow:hidden;}
+.item {position:relative;float:left;margin:6px 3px;border:1px solid #ccc;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;-khtml-border-radius:5px;background-color:#fff}
+.item a.up-folder, .item a.folder, .item a.image {overflow:hidden;display:table-cell;*display:inline-block;width:120px;height:110px;line-height:110px;font-size:10px;outline:none;vertical-align:middle !important;text-align:center;text-decoration:none;color:#808080}
+.item a.up-folder, .item a.folder, .item a.delete, .message {background:url(icons.png) no-repeat}
+.item a.up-folder {background-position:center -300px}
+.item a.up-folder:hover {color:#5fb22b;background-position:center -375px}
+.item a.folder {background-position: center 2px}
+.item a.folder:hover {color:#383838;background-position:center -73px}
+.item a.folder.var {background-position:center -150px}
+.item a.folder.var:hover {background-position:center -225px}
+.item a.image {background:none}
+.item a.image:hover {color:#f00}
+.item span {overflow:hidden;position:absolute;bottom:0;left:0;display:block;clear:both;width:100%;line-height:100%;padding:2px 0;background-color:#eee}
+.item a.delete {position:absolute;top:1px;right:1px;display:block;width:16px;height:16px;padding:0;float:right;text-align:right;clear:both;cursor:pointer;text-indent:-9999px;font-size:0;outline:none;background-position:-32px -509px}
+.item a.delete:hover {background-position:-48px -509px}
+.item img {border:none;display:inline;margin-top:expression(( 80 - this.height ) / 2)}
+html > body .item img {margin:auto}
+.message {display:block;overflow:hidden;margin:2px;padding:4px 3px 0px 32px;height:25px;line-height:1.5em;font: normal 12px/22px Georgia;color:#2b2b2b;border:1px solid #27a0d3;background-position:-35px -575px;background-color:#c4e3f4}

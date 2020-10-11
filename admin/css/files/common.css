@@ -1,0 +1,43 @@
+﻿.rtl {
+	direction:rtl;
+}
+
+.hidden {
+	display:none;
+}
+
+.red {
+	color:#c31414;
+}
+
+.blue {
+	color:#1466c3;
+}
+
+.green {
+	color:#6b9511;
+}
+
+.center {
+	text-align:center;
+}
+
+.left {
+	text-align:left;
+}
+
+.justify {
+	text-align:justify;
+}
+
+.right {
+	text-align:right;
+}
+
+.fleft {
+	float:left;
+}
+
+.fright {
+	float:right;
+}

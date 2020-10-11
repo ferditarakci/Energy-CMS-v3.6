@@ -1,0 +1,181 @@
+﻿a.devami,
+a.devami:link,
+a.smallbtn2,
+a.smallbtn2:link {
+	display:block;
+	float:left;
+	height:25px;
+	padding-right:15px;
+	font-size:12px;
+	color:#434343;
+	text-decoration:none;
+	text-transform:none;
+	background:url(../images/buttons/smallbtn2-r.png) no-repeat top right;
+}
+
+a.devami:hover,
+a.smallbtn2:hover {
+	color:#848383;
+	background-position:right -25px;
+}
+
+a.devami span,
+a.devami:link span,
+a.smallbtn2 span,
+a.smallbtn2:link span {
+	display:block;
+	line-height:25px;
+	padding:0 0 0 15px;
+	text-shadow:1px 1px 0px #f7ffff;
+	background:url(../images/buttons/smallbtn2-l.png) no-repeat;
+}
+
+a.devami:hover span,
+a.smallbtn2:hover span {
+	background-position:0 -25px;
+}
+
+/* Tag button */
+a.tag-btn,
+a.tag-btn:link {
+	display:block;
+	float:left;
+	height:25px;
+	padding-right:10px;
+	font-size:12px;
+	color:#848383;
+	text-decoration:none;
+	text-transform:none;
+	background:url(../images/buttons/tag-btn-r.png) no-repeat top right;
+}
+
+a.tag-btn:hover {
+	color:#434343;
+	background-position:right -25px;
+}
+
+a.tag-btn span,
+a.tag-btn:link span { 
+	display: block; 
+	line-height: 25px; 
+	padding: 0px 0 0px 8px; 
+	text-shadow:1px 1px 0px #f7ffff;
+	background:url(../images/buttons/tag-btn-l.png) no-repeat; 
+}
+
+a.tag-btn:hover span {
+	background-position:0 -25px;
+}
+
+
+
+
+
+
+/* call button */
+
+a.call-btn,
+a.call-btn:link {
+	display:block;
+	float:left;
+	height:45px;
+	margin-right:10px;
+	padding-right:20px;
+	font-size:1.6em;
+	color:#848383;
+	text-decoration:none;
+	text-transform:none;
+	background:url(../images/buttons/call-btn-r.png) no-repeat top right;
+}
+
+a.call-btn span,
+a.call-btn:link span {
+	display:block;
+	height:45px;
+	line-height:40px;
+	padding:0 0 0 20px;
+	color:#505050;
+	text-shadow:1px 1px 0px #fefff3;
+	background:url(../images/buttons/call-btn-l.png) no-repeat;
+}
+
+a.call-btn:hover span {
+	color:#1f1f1f;
+	text-shadow: 1px 1px 0px #fefff3;
+}
+
+a.call-btn:active {
+	color:#434343;
+	background-position: right -45px;
+}
+
+a.call-btn:active span {
+	background-position: 0 -45px;
+}
+
+/*---------- button style 1 : btn1 -----------*/
+
+
+
+
+
+
+.sayfala {
+	overflow:hidden;
+	float:right;
+	width:auto;
+	margin:10px 2px 10px 0;
+	padding:0;
+}
+
+.sayfala * {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+.sayfala ul {
+	float:right;
+	text-align:right;
+}
+
+.sayfala li {
+	display:block;
+	float:left;
+	height:25px;
+	margin-left:2px;
+	padding-right:3px;
+	background:url(../images/buttons/smallbtn2-r.png) no-repeat top right;
+}
+
+.sayfala li span,
+.sayfala li a,
+.sayfala li a:link {
+	display:block !important;
+	line-height:25px;
+	padding:0 12px 0 15px;
+	font-size:12px;
+	color:#434343;
+	text-decoration:none;
+	text-transform:none;
+	text-shadow:1px 1px 0px #f7ffff;
+	background:url(../images/buttons/smallbtn2-l.png) no-repeat;
+}
+
+.sayfala li.active span,
+.sayfala li.gap span {
+	cursor:default;
+}
+
+.sayfala li:hover,
+.sayfala li.active {
+	color:#848383;
+	background-position:right -25px;
+}
+
+.sayfala li:hover a,
+.sayfala li:hover a:link,
+.sayfala li.active span {
+	color:#848383;
+	background-position:0 -25px;
+}

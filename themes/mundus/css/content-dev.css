@@ -1,0 +1,262 @@
+﻿#toc {
+	float:right;
+	width:200px;
+	margin:5px;
+	padding:4px 8px;
+	font-size:85%;
+	border:1px solid #dadada;
+	background:#f1f1f1;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	border-radius:3px;
+}
+
+#toc h3 {
+	width:90%;
+	font-family:Georgia;
+	font-size:14px;
+	font-weight:normal;
+	color:#333;
+	margin:0 auto 5px;
+	padding-bottom:3px;
+	text-align:center;
+	border-bottom:1px solid #dadada;
+}
+
+#toc ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+#toc li {
+	margin:0;
+	padding:0;
+	padding-left:10px;
+	background:url(../images/images/bullet.png) no-repeat left center;
+}
+
+#toc li a,
+#toc li a:link {
+	font-weight:normal;
+	color:#21759b;
+	text-decoration:none;
+	background:none;
+}
+
+#toc li a:visited {
+	color:#4ca6cf;
+}
+
+#toc li a:hover,
+#toc li.active a,
+#toc li.active a:link {
+	color:#d54e21;
+}
+
+
+
+
+
+/*============== Page Content Style ==============*/
+
+.contents {
+	overflow:hidden;
+	margin:0 0 -30px;
+	padding:0;
+}
+
+.ewy_home .contents {
+	margin-bottom:0;
+}
+
+.contents .title {
+	padding:1px 0 3px;
+}
+
+.contents .date {
+	font-size:10px;
+	color:#313131;
+}
+
+.contents .title #sub-title {
+	font-size:12px;
+	font-weight:normal;
+	font-style:italic;
+	color:#999;
+}
+
+.contents .sutun .sayfa-sayisi {
+	font-weight:bold;
+	padding:2px 14px 0;
+	background:url(../images/images/icon-pages.gif) no-repeat 0 5px !important;
+}
+
+.contents img {
+	margin:0;
+	padding:5px;
+	border:1px solid #ccc;
+	background-color:#fff;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	-khtml-border-radius:5px;
+	-o-border-radius:5px;
+	border-radius:5px;
+}
+
+.contents img:hover {
+	border-color:#aaa;
+}
+
+
+
+
+
+
+
+
+
+/*============== Page Referance Style ==============*/
+
+.contents .referans {
+	overflow:hidden;
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.contents .referans a {
+	cursor:pointer;
+}
+
+.contents .referans.add-margin {
+	margin-bottom:50px;
+}
+
+.contents .referans li {
+	display:block;
+	float:left;
+	margin:0 0 10px 19px;
+	padding:0 0 10px;
+	list-style:none;
+}
+
+.contents .referans li .grid {
+	overflow:hidden;
+	display:block;
+	float:left;
+	width:220px;
+	height:230px;
+}
+
+.contents .referans li .grid h5 {
+	margin:0;
+	padding:2px 0;
+	white-space:nowrap;
+	font-family:'00297Regular';
+	font-size:16px;
+	font-weight:normal;
+	color:#4B4B4B;
+}
+
+.contents .referans li .grid h5 span {
+	float:right;
+	margin-top:2px;
+	font-size:11px;
+}
+
+.contents .referans li .grid p {
+	margin:-8px 0 5px;
+	line-height:1.5em;
+	font-size:11px;
+	color:#858585;
+}
+
+.contents .referans li .grid .img_bg {
+	display:inline-block;
+	width:214px;
+	height:128px;
+	padding:3px 3px 19px;
+	background:transparent url(../images/ref_frame.png) no-repeat;
+	vertical-align:middle;
+}
+
+.contents img  {
+   image-rendering: optimizeQuality; /* Firefox 3.6+; default behavior is identical, no need to specify \*/
+   -ms-interpolation-mode: bicubic;  /* Internet Explorer 7.0; default in IE8+ \*/
+}
+
+.contents .referans li:hover .grid .img_bg {
+	background-position:right top;
+}
+
+.contents .referans li .grid img {
+	margin:0;
+	padding:0;
+	border:0;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	-khtml-border-radius:0;
+	-o-border-radius:0;
+	border-radius:0;
+	background:none;
+}
+
+.contents .referans.home {
+	margin:0;
+}
+
+.contents .referans.home li {
+	margin:0 0 0px 6px;
+}
+
+.contents .referans.home li .grid h5,
+.contents .referans.info li .grid h5 {
+	font-size:13px;
+}
+
+.contents .referans.home li .grid {
+	width:150px;
+	height:120px;
+}
+
+.contents .referans.home li .grid .img_bg {
+	width:144px;
+	height:86px;
+	padding:3px 3px 13px;
+	background-image:url(../images/ref_home_frame.png);
+}
+
+.contents .referans.home li:hover .grid .img_bg {
+	background-position:right top;
+}
+
+.contents .referans.info {
+	margin:0;
+}
+
+.contents .referans.info li {
+	margin:0 0 0 10px;
+}
+
+.contents .referans.info li .grid {
+	width:140px;
+	height:115px;
+}
+
+.contents .referans.info li .grid .img_bg {
+	width:136px;
+	height:81px;
+	padding:2px 2px 12px;
+	background-image:url(../images/ref_info_frame.png);
+}
+
+.contents .referans.info li:hover .grid .img_bg {
+	background-position:right top;
+}
+
+.contents .referans li.no-margin {
+	clear:both;
+	margin-left:0;
+}

@@ -1,0 +1,10 @@
+﻿@font-face{
+	font-family:'00297Regular';
+	font-weight:normal;
+	font-style:normal;
+	src:url("../font/00297-webfont.eot");
+	src:url("../font/00297-webfont.eot?#iefix") format("embedded-opentype"),
+	    url("../font/00297-webfont.woff") format("woff"),
+	    url("../font/00297-webfont.ttf") format("truetype"),
+	    url("../font/00297-webfont.svg#00297Regular") format("svg");
+	}

@@ -1,0 +1,279 @@
+﻿#navlist,
+#navlist * {
+	margin:0;
+	padding:0;
+	list-style:none;
+	line-height:inherit;
+}
+
+#navlist {
+	float:left;
+	height:38px;
+	border-right:1px solid #6e6e6e;
+}
+
+/* Webkit fixes */
+.webkit #navlist {
+	margin-top:0;
+}
+
+#navlist li {
+	position:relative;
+	display:block;
+	cursor:pointer;
+}
+
+#navlist li:hover {visibility:inherit; /* fixes IE7 'sticky bug' \*/}
+
+#navlist > li {
+	float:left;
+	border:none;
+	border-left:1px solid #6e6e6e;
+	border-right:1px solid #303030;
+	background: url(../images/navLi.png) repeat-x;
+	-webkit-transition: all 0.3s ease-in 0.4s;
+	-moz-transition: all 0.3s ease-in 0.4s;
+	transition: all 0.3s ease-in 0.4s;
+}
+
+
+/*
+======================================================
+	Üst Menü Styles
+======================================================
+*/
+
+#navlist li.first {
+	border-left:none;
+	-webkit-border-radius:5px 0 0 5px;
+	-moz-border-radius:5px 0 0 5px;
+	-o-border-radius:5px 0 0 5px;
+	-ms-border-radius:5px 0 0 5px;
+	border-radius:5px 0 0 5px;
+}
+
+.ie7 #navlist li.first {}
+
+#navlist li.last {}
+
+
+#navlist > li:hover,
+#navlist > li.sfHover,
+#navlist > li.active,
+#navlist > li.jQblend {
+	background-position:0 100%;
+}
+
+.ie6 #navlist > li:hover,
+.ie6 #navlist > li.sfHover,
+.ie6 #navlist > li.active,
+.ie7 #navlist > li:hover,
+.ie7 #navlist > li.sfHover,
+.ie7 #navlist > li.active,
+.ie8 #navlist > li:hover,
+.ie8 #navlist > li.sfHover,
+.ie8 #navlist > li.active {
+	background:url(../images/navLiHover.png) repeat-x;
+}
+
+
+#navlist > li a.topLevel {
+	position:relative;
+	display:block;
+	padding:13px 15px 11px;
+	font-size:11px;
+	font-weight:normal;
+	font-style:normal;
+	color: #ababab;
+	cursor:pointer;
+	text-decoration:none;
+}
+
+#navlist > li:hover a.topLevel,
+#navlist > li.sfHover a.topLevel,
+#navlist > li.active a.topLevel {
+	color:#fff;
+}
+
+#navlist a span.nav-tag {
+	display:block;
+}
+
+.ie7 #navlist ul a span.nav-tag {
+	margin-top:-3px;
+}
+
+
+/*
+======================================================
+	Home Menü İcon Göstergesi
+======================================================
+*/
+
+#navlist a.topLevel.home {
+	padding:11px 12px 10px;
+}
+
+#navlist a.home span.nav-tag {
+	width:18px;
+	height:17px;
+	text-indent:-9999px;
+	background:url(../images/home.png) no-repeat;
+}
+
+#navlist li:hover a.home span.nav-tag,
+#navlist li.sfHover a.home span.nav-tag,
+#navlist li.active a.home span.nav-tag,
+#navlist li a.home.jQblend span.nav-tag {
+	background-position:0 100%;
+}
+
+
+
+
+/*
+======================================================
+	Alt Menü Göstergesi
+======================================================
+*/
+
+#navlist li .navArrow span.nav-tag {
+	padding-right:12px;
+	background: url(../images/arrow-down.png) no-repeat 99% 4px;
+}
+
+#navlist li:hover .navArrow span.nav-tag,
+#navlist li.sfHover .navArrow span.nav-tag {
+	background-position:99% -146px;
+}
+
+#navlist li .subNavArrow span.nav-tag {
+	padding-right: 9px;
+	background-image:url(../images/arrow-right.png);
+	background-repeat:no-repeat;
+	background-position:99% 4px;
+}
+
+#navlist li:hover .subNavArrow span.nav-tag,
+#navlist li.sfHover .subNavArrow span.nav-tag {
+	background-position:99% -148px;
+}
+
+/*
+======================================================
+	Alt Menü Styles
+======================================================
+*/
+
+#navlist ul {
+	position:absolute;
+	top:-999em;
+	z-index:10;
+	width:238px;
+	padding:0px;
+	border:1px solid #4e4e4e;
+	border:1px solid rgba(82, 82, 82, 0.9);
+	-webkit-border-radius: 0 0 3px 3px;
+	-moz-border-radius: 0 0 3px 3px;
+	-o-border-radius: 0 0 3px 3px;
+	-ms-border-radius: 0 0 3px 3px;
+	border-radius: 0 0 3px 3px;
+}
+
+.ie6 #navlist ul,
+.ie7 #navlist ul {
+	border-color:#4e4e4e;
+}
+
+#navlist ul ul {
+	-webkit-border-radius: 0 3px 3px 3px;
+	-moz-border-radius: 0 3px 3px 3px;
+	-o-border-radius: 0 3px 3px 3px;
+	-ms-border-radius: 0 3px 3px 3px;
+	border-radius: 0 3px 3px 3px;
+}
+
+#navlist li:hover ul,
+#navlist li.sfHover ul {
+	left:-1px;
+	top:auto;
+	z-index:99;
+}
+
+#navlist li:hover li ul,
+#navlist li.sfHover li ul {
+	top:-999em;
+}
+
+#navlist li li:hover ul,
+#navlist li li.sfHover ul {
+	left:238px; /* match ul width */
+	top:-1px;
+}
+
+#navlist li li:hover li ul,
+#navlist li li.sfHover li ul {
+	top:-999em;
+}
+
+#navlist li li li:hover ul,
+#navlist li li li.sfHover ul {
+	left:238px; /* match ul width */
+	top:-1px;
+}
+
+#navlist ul li {
+	position:relative;
+	clear:both;
+	float:none;
+	height:inherit;
+	border:none;
+	border-bottom:1px dotted #636363;
+	border-bottom:1px dotted rgba(255, 255, 255, 0.15);
+	background-color:#494949;
+	background-color:rgba(76, 76, 76, 0.9);
+}
+
+.ie6 #navlist ul li,
+.ie7 #navlist ul li {
+	background-color:#494949;
+	border-color:#636363;
+}
+
+#navlist ul li:last-child {border-bottom:none;}
+
+#navlist ul li:hover,
+#navlist ul li.sfHover,
+#navlist ul li.active {
+	background-color:#3f3f3f;
+	background-color:rgba(66, 66, 66, 0.9);
+}
+
+.ie6 #navlist ul li:hover,
+.ie6 #navlist ul li.sfHover,
+.ie6 #navlist ul li.active,
+.ie7 #navlist ul li:hover,
+.ie7 #navlist ul li.sfHover,
+.ie7 #navlist ul li.active {
+	background-color:#3f3f3f;
+}
+
+
+#navlist ul a,
+#navlist ul a:link {
+	display:block;
+	padding:10px 7px;
+	font-size:10px;
+	font-weight:normal;
+	color:#bfbfbf;
+	cursor:pointer;
+	text-shadow:none;
+	text-decoration:none;
+}
+
+#navlist li li:hover > a,
+#navlist li li.sfHover > a,
+#navlist li li.active > a {
+	color:#F1F1F1;
+}
+

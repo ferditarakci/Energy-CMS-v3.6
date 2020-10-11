@@ -1,0 +1,96 @@
+﻿@charset "utf-8";
+
+/*
+	Copyright © 2008 - 2012
+	Energy Web Yazılım - İstanbul
+	www.webtasarimx.net
+	bilgi@webtasarimx.net
+*/
+
+body {
+	font-family:"Segoe UI", Tahoma, "Trebuchet MS", Arial, Helvetica, Sans-Serif, "Courier New";
+	font-size:13px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	color:#444;
+	line-height:1.5em;
+}
+
+h1.title {
+	font-size:19px;
+	font-weight:nold;
+	color:#222;
+	margin-bottom:8px;
+	padding:2px 0;
+}
+
+
+.mceContentBody {
+	font: 12px "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+	color:#333;
+	line-height:1.5em;
+	background:#fff;
+}
+
+.mceContentBody a,
+.mceContentBody a:link,
+.mceContentBody a:visited {color:#185482;}
+.mceContentBody a:hover {color:#0d3655;}
+
+#readmore {
+	display:block;
+	margin:8px 0;
+	padding:.1em 0 0;
+	border:none;
+	background:#f00;
+}
+
+hr.system-pagebreak {
+	display:block;
+	margin:8px 0;
+	padding:.1em 0 0;
+	border:none;
+	background:#07f;
+}
+/*
+.mceContentBody pre {
+	overflow:auto;
+	display:block;
+	width:auto;
+	max-height:200px;
+	margin:0 auto;
+	padding:5px 8px;
+	font:13px "Courier 10 Pitch", Courier, monospace;
+	color:#4d4b4b;
+	cursor:default;
+	border:1px solid #7f7f7f;
+	border-right-color:#cfcece;
+	border-bottom-color:#cfcece;
+	background-color:#f4f4f4;
+}
+*/
+/* Tables */
+table {
+	border:none !important;
+	border-bottom:1px solid #ddd !important;
+	border-collapse:collapse;
+	border-spacing:0;
+	text-align:left;
+	margin:0 0 1.625em;
+	width:100%;
+}
+table tr th {
+	border:none !important;
+	color:#666;
+	font-size:10px;
+	font-weight:500;
+	letter-spacing:0.1em;
+	line-height:2.6em;
+	text-transform:uppercase;
+}
+table tr td {
+	border:none !important;
+	border-top:1px solid #ddd !important;
+	padding:6px 10px 6px 0;
+}

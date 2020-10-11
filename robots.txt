@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Sitemap: http://www.webtasarimx.net/sitemap.xml
+Disallow: /admin/
+Disallow: /files/
+Disallow: /include/
+Disallow: /javascript/
+Disallow: /500.asp
+

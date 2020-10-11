@@ -1,0 +1,203 @@
+/* -- main menu --*/
+.top-menu,
+.top-menu ul {
+	float:left;
+	margin:0;
+	padding:8px;
+	list-style:none;
+}
+
+.top-menu ul {float:none;}
+
+.top-menu li {
+	margin:0;
+	padding:0;
+}
+
+
+
+.top-menu li {
+	float:left;
+	display:block;
+	margin-left:2px;
+	cursor:pointer;
+	background:none;
+}
+
+.top-menu li ul {
+	position:absolute;
+	z-index:99;
+	left:-999em;
+	height:auto;
+	width:200px;
+	margin-top:.5em;
+}
+
+.top-menu li ul ul {
+	margin:-2em 0 0 16em;
+}
+
+.top-menu li li {
+	width:99%;
+	clear:left;
+	display:block;
+}
+
+.top-menu li:hover ul ul,
+.top-menu li:hover ul ul ul,
+.top-menu li.sfHover ul ul,
+.top-menu li.sfHover ul ul ul {
+	left:-999em;
+}
+
+.top-menu li:hover ul,
+.top-menu li li:hover ul,
+.top-menu li li li:hover ul,
+.top-menu li.sfHover ul,
+.top-menu li li.sfHover ul,
+.top-menu li li li.sfHover ul {
+	left:auto;
+}
+
+.sf-shadow {text-shadow:0 1px 0 #000;}
+
+/* üst menü */
+.top-menu > li {
+	height:30px;
+	z-index:10;
+	margin:0;
+	padding:0 6px;
+	background:url(../images/top-menu/menu-divider.png) no-repeat right center;
+}
+
+.top-menu li.first-item {padding-left:0 !important;}
+.top-menu li.last-item {background-image:none !important;}
+
+.top-menu li a,
+.top-menu li a:link {
+	display:block;
+	height:30px;
+	line-height:30px;
+	margin:0;
+	padding:0;
+	cursor:pointer;
+	/*font-family: arial;*/
+	font-size:12px;
+	font-weight:normal;
+	color:#f2f2f2;
+	text-decoration:none;
+	background:url(../images/top-menu/menu-bg.gif) no-repeat right -30px;
+}
+
+.top-menu li a span,
+.top-menu li a:link span {
+	display:block;
+	width:auto;
+	height:30px;
+	margin-right:5px;
+	padding:0 8px 0 12px;
+	background:url(../images/top-menu/menu-bg.gif) no-repeat top left;
+}
+
+/* menü hover */
+.top-menu li:hover,
+.top-menu li.sfhover,
+.top-menu li.active {}
+
+.top-menu li:hover a,
+.top-menu li.sfhover a,
+.top-menu li a:hover,
+.top-menu li.active a {
+	color:#e2e2e2;
+	background:url(../images/top-menu/menu-bg.gif) no-repeat right -90px;
+}
+
+.top-menu li:hover a span,
+.top-menu li.sfhover a span,
+.top-menu li a:hover span,
+.top-menu li.active a span {
+	background:url(../images/top-menu/menu-bg.gif) no-repeat left -60px;
+}
+
+/* menu hover */
+.top-menu li.active a,
+.top-menu li.active a:link {}
+
+.top-menu li.havechild a,
+.top-menu li.havechild a:link {}
+
+.top-menu li.havechild a span,
+.top-menu li.havechild a:link span {}
+
+.top-menu li.havechild:hover a,
+.top-menu li.havechild.sfhover a,
+.top-menu li.havechild a:hover,
+.top-menu li.havechild.active a {}
+
+.top-menu li.havechild:hover a span,
+.top-menu li.havechild.sfhover a span,
+.top-menu li.havechild a:hover span,
+.top-menu li.havechild.active a span {}
+
+/* Alt menü */
+.top-menu li ul, .top-menu li ul ul {
+	background-color:#373737;
+	box-shadow:3px 3px 3px #a8aaac;
+	-moz-box-shadow:3px 3px 3px #a8aaac;
+	-khtml-box-shadow:3px 3px 3px #a8aaac;
+	-webkit-box-shadow:3px 3px 3px #a8aaac;
+	border-radius:7px;
+	-webkit-border-radius:7px;
+	-moz-border-radius:7px;
+	-khtml-border-radius:7px;
+}
+
+.top-menu li ul li {
+	border-bottom:1px dotted #585757;
+	background-image:none;
+}
+
+/*
+.top-menu li ul li:first-child {
+	border-top:1px dotted #585757;
+}
+*/
+
+.top-menu li ul a,
+.top-menu li ul a:link {
+	width:auto;
+	height:auto;
+	line-height:30px;
+	padding:0 4px 0 2px;
+	font-size:12px;
+	font-weight:normal;
+	color:#f2f2f2;
+	text-shadow:0 1px 1px #323537;
+	background:none !important;
+}
+
+.top-menu li ul a span,
+.top-menu li ul a:link span {
+	overflow:hidden;
+	cursor:pointer;
+	background:none !important;
+}
+
+.top-menu li.havesubchild {
+	display:block;
+	background-image:url(../images/top-menu/ust-menu/sub_menu_arrow.gif);
+	background-repeat:no-repeat;
+	background-position:94% 50%;
+}
+
+.top-menu li ul a:hover,
+.top-menu li ul a:focus,
+.top-menu li ul a:active,
+.top-menu ul li:hover,
+.top-menu ul li.sfhover,
+.top-menu ul ul li:hover,
+.top-menu ul ul li.sfhover,
+.top-menu ul li a.active,
+.top-menu ul ul li a.active {
+	background:#850d15;
+}

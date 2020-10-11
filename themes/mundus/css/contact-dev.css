@@ -1,0 +1,226 @@
+﻿select,
+textarea,
+input.inputbox {
+	font-size:12px;
+}
+
+select,
+input.inputbox {
+	padding:5px 6px;
+	letter-spacing:.02em !important;
+}
+
+select option {
+	padding:1px 6px;
+}
+
+select,
+textarea,
+.inputbox {
+	width:230px;
+	padding:5px;
+	border:1px solid #dfdfdf;
+	border-top-color:#d6d5d5;
+	background-color:#fff;
+	color:#2f3032;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-khtml-border-radius:3px;
+	-webkit-border-radius:3px;
+	-o-border-radius:3px;
+}
+
+select:focus,
+textarea:focus,
+.inputbox:focus,
+.inputbox.focus {
+	border-color:#c6c6c6;
+	border-top-color:#a9a9a9;
+	background-color:#fff;
+}
+
+textarea {
+	overflow:auto;
+	width:auto;
+	height:100px;
+	resize:vertical;
+}
+
+textarea.inputbox {width:295px;}
+.ie6 textarea.inputbox {width:280px;}
+.ie7 textarea.inputbox {width:285px;}
+
+.checkbox {
+	float:none;
+	margin:2px 0 0 3px;
+}
+
+input.button {
+	display:inline-block;
+	line-height:normal;
+	padding:5px 14px 6px;
+	border:1px solid #ccc;
+	border-bottom-color:#bbb;
+	font-size:12px;
+	color:#848383;
+	cursor:pointer;
+	text-shadow:0 1px 1px rgba(255, 255, 255, 0.75);
+	background-color:#E6E6E6;
+	background-repeat:no-repeat;
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(white), color-stop(25%, white), to(#E6E6E6));
+	background-image:-webkit-linear-gradient(white, white 25%, #E6E6E6);
+	background-image:-moz-linear-gradient(top, white, white 25%, #E6E6E6);
+	background-image:-ms-linear-gradient(white, white 25%, #E6E6E6);
+	background-image:-o-linear-gradient(white, white 25%, #E6E6E6);
+	background-image:linear-gradient(white, white 25%, #E6E6E6);
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-khtml-border-radius:4px;
+	-webkit-border-radius:4px;
+	-o-border-radius:4px;
+}
+
+input.button:hover {
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#f0f0f0), color-stop(25%, white), to(#d1cfd1));
+	background-image:-webkit-linear-gradient(#f0f0f0, white 25%, #d1cfd1);
+	background-image:-moz-linear-gradient(top, #f0f0f0, white 25%, #d1cfd1);
+	background-image:-ms-linear-gradient(#f0f0f0, white 25%, #d1cfd1);
+	background-image:-o-linear-gradient(#f0f0f0, white 25%, #d1cfd1);
+	background-image:linear-gradient(#f0f0f0, white 25%, #d1cfd1);
+}
+
+.ie input.button {
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+}
+
+.ie input.button:hover {
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0f0f0', endColorstr='#d1cfd1', GradientType=0);
+}
+
+.ie7 input.button {padding:3px 6px 4px;}
+
+span.b1 {
+	display:inline-block;
+	margin-left:130px;
+}
+
+span.b2 {
+	display:inline-block;
+	margin-left:10px;
+}
+
+.ie7 span.ie {
+	padding:1px;
+	border:1px solid #ccc;
+	border-bottom-color:#bbb;
+}
+
+.ie7 span.ie input {border:none !important;}
+
+
+
+
+
+/*============== Contact Page Style ==============*/
+
+.contact {
+	overflow:hidden;
+	width:940px;
+	margin:0 auto;
+	padding:0;
+}
+
+.contact .contents {
+	margin:0;
+}
+
+.contact .not {
+	margin:7px 0 5px;
+	font-family:'00297Regular';
+	font-size:14px;
+	font-weight:normal;
+	font-style:italic;
+}
+
+.contact .left {
+	float:left;
+	width:440px;
+	margin:0;
+}
+
+.contact .left.divider {
+	display:inline;
+	clear:none;
+	width:2px;
+	height:300px;
+	margin:40px 26px 0;
+	background:url(../images/divider_vertical.png) repeat-y center;
+}
+
+.contact iframe {
+	width:100% !important;
+	height:350px !important;
+	border:0;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	-khtml-border-radius:10px;
+	-o-border-radius:10px;
+}
+
+.contact fieldset {
+	width:100%;
+	border:0;
+	margin:5px 0 0;
+	padding:0;
+}
+
+.contact fieldset legend {
+	display:none;
+	padding-left:8px;
+	font-size:16px;
+	font-weight:normal;
+}
+
+.contact .row {
+	overflow:hidden;
+	padding:2px 0;
+}
+
+.contact .row label {
+	float:left;
+	display:block;
+	width:125px;
+	padding:2px 0 0;
+	font-family:'00297Regular';
+	font-size:14px;
+	font-weight:normal;
+}
+
+.contact .row label span {
+	float:right;
+	padding-right:1px;
+}
+
+.contact .row.check div {margin-left:130px;}
+.contact .row.check div input.checkbox {margin-bottom:5px;}
+.contact .row.check div label.checkbox {
+	float:none;
+	display:inline;
+	width:auto;
+	padding:3px 5px;
+	font-weight:normal;
+}
+
+.contact .row.buttons {margin-bottom:5px;}
+
+.contact form input.inputbox {padding:5px 6px;}
+
+.ie6 .contact input.checkbox,
+.ie7 .contact input.checkbox {margin-bottom:0;}
+
+.contact address {
+	font-weight:normal;
+	font-style:normal;
+}
+

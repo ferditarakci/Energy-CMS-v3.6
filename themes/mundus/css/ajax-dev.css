@@ -1,0 +1,122 @@
+﻿.ewy_sys_msg {
+	position: relative;
+	top: -20px;
+	left: 0;
+	overflow: hidden;
+	margin-bottom: 2px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.ewy_sys_msg.tn {
+	top: 0;
+}
+
+.ewy_sys_msg .ewy_messages {
+	margin: 1px;
+	padding: 13px 0 13px 37px;
+	font-family: '00297Regular';
+	font-size: 14px;
+	font-weight: normal;
+	color: #2b2b2b;
+	text-align: left;
+	background-color: #f2bba0;
+}
+
+.ewy_sys_msg.error .ewy_messages,
+.ewy_sys_msg.success .ewy_messages,
+.ewy_sys_msg.warning .ewy_messages,
+.ewy_sys_msg.info .ewy_messages,
+.ewy_sys_msg.loading .ewy_messages {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+}
+
+
+.ewy_sys_msg.error {
+	color: #833;
+	border: 1px solid #F6988F;
+}
+
+.ewy_sys_msg.error .ewy_messages {
+	background: #FDD2D1 url(../images/message/error.png) no-repeat 10px 12px;
+}
+
+.ewy_sys_msg.success {
+	color: #398B03;
+	border: 1px solid #50C602;
+}
+
+.ewy_sys_msg.success .ewy_messages {
+	background: #e9ffda url(../images/message/success.png) no-repeat 10px 12px;
+}
+
+.ewy_sys_msg.warning {
+	color: #B17A01;
+	border: 1px solid #FFE072;
+}
+
+.ewy_sys_msg.warning .ewy_messages {
+	background: #FDFAED url(../images/message/warning.png) no-repeat 10px 12px;
+}
+
+.ewy_sys_msg.info {
+	color: #1A4773;
+	border: 1px solid #79AAD9;
+}
+
+.ewy_sys_msg.info .ewy_messages {
+	background: #dde9f4 url(../images/message/info.png) no-repeat 10px 12px;
+}
+
+.ewy_sys_msg.loading {
+	color: #1A4773;
+	border: 1px solid #79AAD9;
+}
+
+.ewy_sys_msg.loading .ewy_messages {
+	background: #dde9f4 url(../images/message/arbo-loader-grey.gif) no-repeat 10px 17px;
+}
+
+#leftcolumn .ewy_sys_msg .ewy_messages,
+#rightcolumn .ewy_sys_msg .ewy_messages {
+	padding: 3px 0 3px 20px;
+	line-height: 15px;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+#leftcolumn .ewy_sys_msg.error .ewy_messages,
+#rightcolumn .ewy_sys_msg.error .ewy_messages {
+	background: #f2bba0 url(../images/message/small-error.png) no-repeat 4px 6px;
+}
+
+#leftcolumn .ewy_sys_msg.success .ewy_messages,
+#rightcolumn .ewy_sys_msg.success .ewy_messages {
+	background: #91ca3f url(../images/message/small-success.png) no-repeat 4px 6px;
+}
+
+#leftcolumn .ewy_sys_msg.warning .ewy_messages,
+#rightcolumn .ewy_sys_msg.warning .ewy_messages {
+	background: #fceb8c url(../images/message/small-warning.png) no-repeat 4px 6px;
+}
+
+#leftcolumn .ewy_sys_msg.info .ewy_messages,
+#rightcolumn .ewy_sys_msg.info .ewy_messages {
+	background: #9ed2ef url(../images/message/small-info.png) no-repeat 4px 6px;
+}
+
+#leftcolumn .ewy_sys_msg.loading .ewy_messages,
+#rightcolumn .ewy_sys_msg.loading .ewy_messages {
+	padding-left: 23px;
+	background: #9ed2ef url(../images/message/arbo-loader-grey.gif) no-repeat 4px 6px;
+}
