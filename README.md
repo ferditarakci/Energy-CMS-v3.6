@@ -27,7 +27,7 @@
 - Sistemde yorum yazma ve yazılan yoruma cevap, cevaba cevap gibi alt alta yorum yazabilme özelliği mevcuttur.
 
 
-**VE SAYAMADIĞIM ONLARCA ÖZELLİK**
+**VE SAYAMADIĞIM ONLARCA ÖZELLİK...**
 
 ### Kullanılan Teknolojiler
 
@@ -39,6 +39,21 @@ ASP (VBScript, JScript)
 MYSQL
 
 ASP MODÜLLERİ (Persits.Upload, Persits.Jpeg, Persits.MailSender)
+```
+
+
+**KURULUM VE ADMİN PANEL GİRİŞ BİLGİLERİ**
+
+```
+1- Microsoft ASP (Klasik ASP) desteği olan bir sunucuya (plesk vb) dosyaları yükleyin.
+2- Bir MySQL veritabanı oluşturun.
+3- PhpMyAdmin ile bağlanıp webtsrmx_2014-02-28.sql isimli dosyayı import edin.
+4- Oluşturduğunuz MySQL veritabanı username ve password'unu admin/include/database.asp dosyasında 77. satırdan itibaren tanımlayın.
+5- Hata verirse hemen altındaki MySQL ODBC satırlarını güncelleyin.
+```
+```
+Kullanıcı Adı: yonetici
+Şifre: 123456
 ```
 
 
